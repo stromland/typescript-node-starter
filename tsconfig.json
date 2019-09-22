@@ -6,13 +6,9 @@
     "paths": {
       "*": ["types/*"]
     },
-    "target": "es2019",
-    "module": "commonjs",
-    "outDir": "lib",
-    "rootDir": "src",
     "strict": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true
+    "emitDeclarationOnly": true,
+    "noImplicitAny": true
   },
-  "exclude": ["**/*.test.ts"]
+  "exclude": ["**/*.test.ts", "lib"]
 }
