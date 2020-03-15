@@ -8,7 +8,7 @@
     },
     "strict": true,
     "emitDeclarationOnly": true,
-    "noImplicitAny": true
+    "esModuleInterop": true
   },
   "exclude": ["**/*.test.ts", "lib"]
 }
