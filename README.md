@@ -6,3 +6,4 @@ Starter project for NodeJS projects
 - Linting with ESLint
 - Formatting with Prettier
 - Building with Babel
+- Running with Nodemon
