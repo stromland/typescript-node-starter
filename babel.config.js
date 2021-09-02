@@ -12,7 +12,6 @@ module.exports = (api) => {
       ],
       '@babel/preset-typescript',
     ],
-    plugins: ['@babel/plugin-proposal-class-properties'],
     env: {
       build: {
         ignore: ['**/*.test.ts', '__snapshots__'],

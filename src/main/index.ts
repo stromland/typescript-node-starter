@@ -6,10 +6,6 @@ export function getNameFromArgs(): string {
   return args.length > 2 ? args[2] : 'world';
 }
 
-function main(): void {
+export function main(): void {
   console.log(greet(getNameFromArgs()));
-}
-
-if (process.env.NODE_ENV !== 'test') {
-  main();
 }

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "lib",
+    "declarationDir": "build",
     "baseUrl": ".",
     "paths": {
       "*": ["types/*"]
@@ -10,5 +10,5 @@
     "emitDeclarationOnly": true,
     "esModuleInterop": true
   },
-  "exclude": ["**/*.test.ts", "lib"]
+  "exclude": ["**/*.test.ts", "build"]
 }
