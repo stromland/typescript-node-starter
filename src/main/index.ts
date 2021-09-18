@@ -5,7 +5,3 @@ export function getNameFromArgs(): string {
   // node index.js <name>
   return args.length > 2 ? args[2] : 'world';
 }
-
-export function main(): void {
-  console.log(greet(getNameFromArgs()));
-}

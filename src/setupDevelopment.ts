@@ -1,3 +1,7 @@
-import { main } from './main';
+import { getNameFromArgs, greet } from './main';
+
+function main(): void {
+  console.log(greet(getNameFromArgs()));
+}
 
 main();

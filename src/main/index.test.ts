@@ -13,6 +13,7 @@ describe('greet', () => {
 
 describe('getNameFromArgs', () => {
   test('given no argument it should greet world', () => {
+    process.argv = [];
     expect(getNameFromArgs()).toBe('world');
   });
   test('given a argument it should greet given argument', () => {
