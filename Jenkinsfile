@@ -1,26 +1,33 @@
 pipeline {
     agent any 
+
     stages {
         stage("Install") {
             steps {
-                nodejs(nodeJSInstallationName: 'node-lts') {
+                nodejs('node-lts') {
                     sh 'npm ci'
                 }
             }
         }
         stage("Test") {
             steps {
-                nodejs(nodeJSInstallationName: 'node-lts') {
+                nodejs('node-lts') {
                     sh 'npm run test:coverage'
                 }
             }
         }
         stage("Build") {
             steps {
-                nodejs(nodeJSInstallationName: 'node-lts') {
+                nodejs('node-lts') {
                     sh 'npm run build'
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            junit 'junit.xml'
         }
     }
 }

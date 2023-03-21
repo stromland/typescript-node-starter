@@ -4,3 +4,4 @@ coverage
 .idea
 build
 *.tgz
+junit.xml

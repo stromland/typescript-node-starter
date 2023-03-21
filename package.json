@@ -15,7 +15,7 @@
     "build:watch": "npm run build:babel -- --watch",
     "types": "tsc",
     "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "jest --ci --reporters=default --reporters=jest-junit",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --fix --ext .ts ./src",
@@ -34,6 +34,7 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "jest": "29.5.0",
+    "jest-junit": "15.0.0",
     "nodemon": "2.0.21",
     "npm-run-all": "4.1.5",
     "prettier": "2.8.6",
@@ -52,5 +53,8 @@
     "exec": "node build/setupDevelopment.js",
     "delay": 200,
     "ext": "*.js"
+  },
+  "jest-junit": {
+    "usePathForSuiteName": "true"
   }
 }
