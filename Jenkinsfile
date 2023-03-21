@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'npm --version'
+                nodejs(nodeJSInstallationName: 'node-lts') {
+                    sh 'npm --version'
+                }
             }
         }
     }
