@@ -28,6 +28,14 @@ pipeline {
                 }
             }
         }
+        stage("Release") {
+            when {
+                tag "v*"
+            }
+            steps {
+                echo "release!"
+            }
+        }
     }
 
     post {
