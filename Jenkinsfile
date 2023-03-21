@@ -1,14 +1,9 @@
 pipeline {
-    agent {
-        kubernetes {
-            cloud 'kubernetes'
-            inheritFrom 'default'
-        }
-    }
+    agent any 
     stages {
         stage("Build") {
             steps {
-                echo 'Hello World'
+                sh 'npm --version'
             }
         }
     }
