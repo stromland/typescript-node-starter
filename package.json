@@ -15,7 +15,7 @@
     "build:watch": "npm run build:babel -- --watch",
     "types": "tsc",
     "test": "jest",
-    "test:coverage": "jest --ci --reporters=default --reporters=jest-junit",
+    "test:coverage": "jest --ci --reporters=default --reporters=jest-junit --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --fix --ext .ts ./src",
@@ -55,6 +55,8 @@
     "ext": "*.js"
   },
   "jest-junit": {
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
     "usePathForSuiteName": "true"
   }
 }

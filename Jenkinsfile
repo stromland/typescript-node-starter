@@ -28,6 +28,7 @@ pipeline {
     post {
         always {
             junit 'junit.xml'
+            clover(cloverReportDir: 'coverage', cloverReportFileName: 'clover.xml')
         }
     }
 }
