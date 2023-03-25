@@ -29,6 +29,15 @@ pipeline {
             when {
                 tag "v*"
             }
+            input {
+                message 'Vil du release denne versjonen?'
+                id 'release'
+                ok 'Ja'
+                submitter 'admin'
+                parameters {
+                    booleanParam 'release'
+                }
+            }
             steps {
                 sh 'npm pack'
             }
