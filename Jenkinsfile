@@ -3,9 +3,6 @@ pipeline {
     tools {
         nodejs 'node-lts'
     }
-    options {
-        timestamps()
-    }
     stages {
         stage("Install") {
             steps {
