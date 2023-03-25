@@ -3,7 +3,9 @@ pipeline {
     tools {
         nodejs 'node-lts'
     }
-
+    options {
+        timestamps()
+    }
     stages {
         stage("Install") {
             steps {
@@ -28,15 +30,11 @@ pipeline {
         stage("Release") {
             when {
                 tag "v*"
+                beforeInput true
             }
             input {
-                message 'Vil du release denne versjonen?'
-                id 'release'
-                ok 'Ja'
+                message 'Vil du release $TAG_NAME versjonen?'
                 submitter 'admin'
-                parameters {
-                    booleanParam 'release'
-                }
             }
             steps {
                 sh 'npm pack'
